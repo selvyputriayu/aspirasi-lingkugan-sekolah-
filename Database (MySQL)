@@ -1,0 +1,22 @@
+CREATE DATABASE lingkungan_sekolah;
+
+USE lingkungan_sekolah;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(50),
+    password VARCHAR(255)
+);
+
+INSERT INTO users (nama, password)
+VALUES ('admin', MD5('12345'));
+
+CREATE TABLE survey (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kebersihan VARCHAR(50),
+    fasilitas VARCHAR(50),
+    penghijauan VARCHAR(50),
+    foto VARCHAR(100),
+    tanggal DATE
+);
+
